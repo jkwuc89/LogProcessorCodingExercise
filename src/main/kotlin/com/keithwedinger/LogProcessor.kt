@@ -80,7 +80,7 @@ class LogProcessor {
      * Parse the log entries into HashMaps defined above
      */
     fun parseLogEntries(logEntries: List<String>) {
-        logEntries.forEach({ logEntry ->
+        logEntries.forEach { logEntry ->
             val (logDate, logUrl) = getDateAndUrlFromLogEntry(logEntry)
 
             // Break down log entry occurrences by date
@@ -106,7 +106,7 @@ class LogProcessor {
             } else {
                 urlToCountMap[logUrl] = 1
             }
-        })
+        }
     }
 
     /**
